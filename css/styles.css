@@ -13,18 +13,15 @@ body {
   color: var(--text-color);
 }
 
+p,
+h1,
+ul {
+  margin: 0;
+}
+
 ul {
   list-style-type: none;
-  margin: 0;
   padding: 0;
-}
-
-p {
-  margin: 0;
-}
-
-h1 {
-  margin: 0;
 }
 
 .container {
@@ -51,38 +48,34 @@ h1 {
   justify-content: flex-start;
 }
 
-.main-nav-list {
+.nav {
   display: flex;
 }
 
-.main-nav-item {
+.nav__item:not(:last-child) {
   margin-right: 32px;
-}
-
-.main-nav-item:last-child {
-  margin-right: 0;
 }
 
 /* CONTACT LINK IN MAIN NAVIGATION */
 
-.contact-link-list {
+.contact-list {
   display: flex;
   align-items: center;
   margin-left: auto;
 }
 
-.contact-link-item:not(:last-child) {
+.contact-list__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.contact-link-item {
+.contact-list__item {
   display: flex;
   align-items: center;
 }
 
 /* LOGO STYLE */
 
-.logo-text {
+.logo {
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
@@ -93,13 +86,13 @@ h1 {
   margin-right: 93px;
 }
 
-.logo-text-color {
+.logo--brand {
   color: var(--brand-color);
 }
 
 /* LINKS STYLE */
 
-.main-nav-link {
+.nav__link {
   color: var(--text-color);
   text-decoration: none;
   font-weight: 500;
@@ -108,15 +101,12 @@ h1 {
   letter-spacing: 0.02em;
 }
 
-.active {
+.nav__link--active {
   color: var(--brand-color);
-}
-
-.active {
   position: relative;
 }
 
-.active:after {
+.nav__link--active:after {
   display: block;
   content: "";
   height: 4px;
@@ -128,19 +118,19 @@ h1 {
 }
 
 /* add transition to links in main navigation */
-.main-nav-link,
-.main-nav-contact-link {
+.nav__link,
+.contact-list__link {
   transition: color 250ms var(--shift);
 }
 
-.main-nav-link:hover,
-.main-nav-link:focus,
-.main-nav-contact-link:hover,
-.main-nav-contact-link:focus {
+.nav__link:hover,
+.nav__link:focus,
+.contact-list__link:hover,
+.contact-list__link:focus {
   color: var(--brand-color);
 }
 
-.main-nav-contact-link {
+.contact-list__link {
   color: var(--font-color-light-gray);
   font-weight: 500;
   text-decoration: none;
@@ -148,13 +138,13 @@ h1 {
   align-items: center;
 }
 
-.contact-icon {
+.contact-list__icon {
   margin-right: 10px;
   fill: var(--font-color-light-gray);
   transition: fill 250ms var(--shift);
 }
 
-.main-nav-contact-link:hover .contact-icon {
+.contact-list__link:hover .contact-list__icon {
   fill: var(--brand-color);
 }
 

@@ -1,0 +1,30 @@
+@use "utils/vars";
+
+// GLOBAL SELECTORS
+body {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  color: $textColor;
+}
+
+p,
+h1,
+ul {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+// SECTION, CONTAINER
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding: 94px 0;
+}
