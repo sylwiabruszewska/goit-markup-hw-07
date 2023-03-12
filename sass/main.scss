@@ -1,4 +1,16 @@
-@use "utils/vars";
+@import "utils/vars";
+@import "components/button";
+@import "components/content";
+@import "components/hero";
+@import "components/logo";
+@import "components/modal";
+@import "components/navigation";
+@import "components/newsletter-form";
+@import "components/order-form";
+@import "components/page-header";
+@import "components/portfolio-gallery";
+@import "components/social-links";
+@import "components/page-footer";
 
 // GLOBAL SELECTORS
 body {
@@ -27,4 +39,18 @@ ul {
 
 .section {
   padding: 94px 0;
+
+  &__heading {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $textColor;
+    margin-bottom: 50px;
+  }
+}
+
+.no-gap {
+  display: block;
 }
