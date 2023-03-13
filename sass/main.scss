@@ -1,15 +1,15 @@
-@import "utils/vars";
-@import "components/button";
-@import "components/hero";
-@import "components/logo";
-@import "components/modal";
-@import "components/navigation";
-@import "components/newsletter-form";
-@import "components/order-form";
-@import "components/page-header";
-@import "components/portfolio-gallery";
-@import "components/social-links";
-@import "components/page-footer";
+@use "utils/variables";
+@use "components/button";
+@use "components/hero";
+@use "components/logo";
+@use "components/modal";
+@use "components/navigation";
+@use "components/newsletter-form";
+@use "components/order-form";
+@use "components/page-header";
+@use "components/portfolio-gallery";
+@use "components/social-links";
+@use "components/page-footer";
 
 // GLOBAL SELECTORS
 body {
@@ -92,7 +92,7 @@ ul {
   &__card {
     position: relative;
     margin: 0;
-    & figcaption {
+    &__caption {
       background-color: rgba(47, 48, 58, 0.8);
       color: $colorWhite;
       line-height: 1.15;
